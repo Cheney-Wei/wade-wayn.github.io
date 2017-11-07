@@ -48,9 +48,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -83,27 +83,50 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <pre><code>前言：本文将使用hexo以及gitHub搭建一个人博客，相比自己申请域名+服务器而言，使用hexo+gitHub主要是免费，便捷。
-</code></pre><h2 id="博文"><a href="#博文" class="headerlink" title="博文"></a>博文</h2><pre><code>安装以及相关配置基于windows系统
-1.NodeJS：node.js有诸多用处，此处用来创建hexo博客框架
-2.GIT客户端：将本地的hexo内容提交至远程gitHub仓库
-</code></pre><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>首先安装node.js,建议去node官网下载并进行安装（不在累述），查看node是否安装成功，在DOS中输入命令行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">node -v</div><div class="line">```，Git安装在此不再累述</div><div class="line"></div><div class="line">- 在DOS中使用node命令安装hexo:</div></pre></td></tr></table></figure></p>
-<p>npm install -g hexo<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">- 安装完成后，在任意一个盘符下建立文件夹（如：F:\HexoSpace）,然后进入当前建立的文件夹目录下，鼠标右击，在弹出的框中选择Git Bash Here,Hexo将会自动在当前目标文件夹建立网站所需要的所有文件</div><div class="line">- 执行上一步之后，继续在DOS中输入：</div></pre></td></tr></table></figure></p>
-<p>hexo init<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">- 待上述步骤完成后，进行Hexo依赖包安装，DOS中输入:</div></pre></td></tr></table></figure></p>
-<p>npm install<br><figure class="highlight plain"><figcaption><span>g``` ```hexo s```查看当前安装的文件以及目录结构,通过dos中http://localhost:4000进行浏览器中访问，此时，便可看到一个博客，此博客只是存在本地，外网（其他人）不能进行访问</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">### 注册GitHub账号 ###</div><div class="line">此处不再累述(略)</div><div class="line">### 创建Git的repository（仓库） ###</div><div class="line">在浏览器地址栏输入http://github.io/进入gitHub网站,登录并进入个人页面，找到并点击```Repositories```,然后找到并点击```New```。此时会弹出一个Create a new repository页面，找到Repository name并填写（其它无须改动），填写格式：yourname.github.io,其中yourname为前面的Owner值，然后点击按钮 Create repository即可完成创建</div><div class="line">###部署本地文件到github###</div><div class="line">远程repository创建好了，剩下的需要将本地的博客放到GitHub上。进入之前Hexo建立网站的目标文件卡下（如：F:\HexoSpace，上文有提到）找到_config.yml文件并打开，推荐使用EditPlus or Notepad++打开，yml文件注重格式(注意字符之间的空格)：</div></pre></td></tr></table></figure></p>
-<p>deploy:<br> type: git<br> repo:<br>  github: git@github.com:wade-wayn/wadewayn.github.io.git,master<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">进入之前Hexo建立网站的目标文件卡下（如：F:\HexoSpace，上文有提到）,鼠标右键唤出菜单，并点击Git Bash Here,在Git Bash DOS弹窗中输入命令：</div></pre></td></tr></table></figure></p>
+        <p>前言：本文将使用hexo以及gitHub搭建一个人博客，相比自己申请域名+服务器而言，使用hexo+gitHub主要是免费，便捷。</p>
+<h2 id="博文"><a href="#博文" class="headerlink" title="博文"></a>博文</h2><p>安装以及相关配置基于windows系统</p>
+<ol>
+<li>NodeJS：node.js有诸多用处，此处用来创建hexo博客框架</li>
+<li>GIT客户端：将本地的hexo内容提交至远程gitHub仓库</li>
+</ol>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>首先安装node.js,建议去node官网下载并进行安装（不在累述），查看node是否安装成功，在DOS中输入命令行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">node -v</div></pre></td></tr></table></figure></p>
+<p>，Git安装在此不再累述</p>
+<ol>
+<li><p>在DOS中使用node命令安装hexo:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g hexo</div></pre></td></tr></table></figure>
+</li>
+<li><p>安装完成后，在任意一个盘符下建立文件夹（如：F:\HexoSpace）,然后进入当前建立的文件夹目录下，鼠标右击，在弹出的框中选择Git Bash Here,Hexo将会自动在当前目标文件夹建立网站所需要的所有文件</p>
+</li>
+<li><p>执行上一步之后，继续在DOS中输入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo init</div></pre></td></tr></table></figure>
+</li>
+<li><p>待上述步骤完成后，进行Hexo依赖包安装，DOS中输入:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>,可以通过<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hexo g</div><div class="line">``` </div><div class="line">进行本地静态资源文件编译，然后通过命令行：</div></pre></td></tr></table></figure></p>
+<p>hexo s<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">查看当前安装的文件以及目录结构,并通过dos中http://localhost:4000进行浏览器中访问，此时，便可看到一个博客，此博客只是存在本地，外网（其他人）不能进行访问</div><div class="line">### 注册GitHub账号 ###</div><div class="line">此处不再累述(略)</div><div class="line">### 创建Git的repository（仓库） ###</div><div class="line">在浏览器地址栏输入http://github.io/进入gitHub网站,登录并进入个人页面，找到并点击</div></pre></td></tr></table></figure></p>
+<p>Repositories<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">,然后找到并点击</div></pre></td></tr></table></figure></p>
+<p>New<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">。此时会弹出一个Create a new repository页面，找到Repository name并填写（其它无须改动），填写格式：yourname.github.io,其中yourname为前面的Owner值，然后点击按钮 Create repository即可完成创建</div><div class="line">###部署本地文件到github###</div><div class="line">远程repository创建好了，剩下的需要将本地的博客放到GitHub上。进入之前Hexo建立网站的目标文件卡下（如：F:\HexoSpace，上文有提到）找到_config.yml文件并打开，推荐使用EditPlus or Notepad++打开，yml文件注重格式(注意字符之间的空格)：</div></pre></td></tr></table></figure></p>
+<p>deploy: type: git repo: github: git@github.com:wade-wayn/wadewayn.github.io.git,master<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">,其中wade-wayn为GitHub上创建的仓库名，上文有提及</div><div class="line"></div><div class="line">进入之前Hexo建立网站的目标文件卡下（如：F:\HexoSpace，上文有提到）,鼠标右键唤出菜单，并点击Git Bash Here,在Git Bash DOS弹窗中输入命令：</div></pre></td></tr></table></figure></p>
 <p>ls -al ~/.ssh<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">，此命令用于检查是否存在SSH Keys。存在，则找到.ssh目录并将其下子项全部删除；反之，则进入之前Hexo建立网站的目标文件卡下（如：F:\HexoSpace，上文有提到），输入命令：</div></pre></td></tr></table></figure></p>
-<p>ssh-keygen -t rsa -C “注册GitHub时的邮箱”<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">```</div><div class="line">ssh-agent -s</div><div class="line">```,然后输入：</div></pre></td></tr></table></figure></p>
-<p>eval $(ssh-agent)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">```</div><div class="line">ssh-add</div><div class="line">```，继续键入命令行：</div></pre></td></tr></table></figure></p>
-<p>clip &lt; ~./.ssh/id_rsa.pub<br><figure class="highlight plain"><figcaption><span>Keys值拷贝，然后到GitHub页面，找到Settings并点击，找到Deployer Keys并添加Keys值，title随便命令，```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Ctrl + V</div><div class="line">```进行粘贴之前DOS中拷贝的SSH Keys到相应的填写栏</div><div class="line"></div><div class="line">最后进入之前Hexo建立网站的目标文件卡下（如：F:\HexoSpace，上文有提到），输入命令行：</div></pre></td></tr></table></figure></p>
-<p>ssh -T git@github.com<br><code>，显示的信息需要键入yes/no，意思就是github将与本地IP进行一个授权认证并绑定，遵询同意,输入</code>yes<code>,
-继续键入命令行：</code>hexo g<code>,然后使用npm进行hexo-deployer-git模块安装:</code>npm hexo-deployer-git –save<code>,然后键入命令:</code>hexo d```进行发布</p>
+<p>ssh-keygen -t rsa -C “注册GitHub时的邮箱”<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">，然后回车[Enter]3次,将会在DOS窗口中弹出【SHA256】字样的，继续输入命令行：</div></pre></td></tr></table></figure></p>
+<p>ssh-agent -s<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">,然后输入：</div></pre></td></tr></table></figure></p>
+<p>eval $(ssh-agent)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">，接下来继续键入命令行：</div></pre></td></tr></table></figure></p>
+<p>ssh-add<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">，继续键入命令行：</div></pre></td></tr></table></figure></p>
+<p>clip &lt; ~./.ssh/id_rsa.pub<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">进行对SSH Keys值拷贝，然后到GitHub页面，找到Settings并点击，找到Deployer Keys并添加Keys值，title随便命令，</div></pre></td></tr></table></figure></p>
+<p>Ctrl + V<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">进行粘贴之前DOS中拷贝的SSH Keys到相应的填写栏</div><div class="line"></div><div class="line">最后进入之前Hexo建立网站的目标文件卡下（如：F:\HexoSpace，上文有提到），输入命令行：</div></pre></td></tr></table></figure></p>
+<p>ssh -T git@github.com<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">，显示的信息需要键入yes/no，意思就是github将与本地IP进行一个授权认证并绑定，遵询同意,输入</div></pre></td></tr></table></figure></p>
+<p>yes<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">,继续键入命令行：</div></pre></td></tr></table></figure></p>
+<p>hexo g<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">,然后使用npm进行hexo-deployer-git模块安装:</div></pre></td></tr></table></figure></p>
+<p>npm hexo-deployer-git –save<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">,然后键入命令:</div></pre></td></tr></table></figure></p>
+<p>hexo d<br>```<br>进行发布</p>
 <p>最终在浏览器中输入，之前在GitHub上面的仓库名进行访问，例如：<a href="https://wade-wade.github.io/即可" target="_blank" rel="external">https://wade-wade.github.io/即可</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/11/06/hexo-github创建个人博客/" data-id="cj9nyw0ez0000qcb7ixu54bps" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/11/06/hexo-github创建个人博客/" data-id="cj9p3i8s30001dwb7aq34qcjf" class="article-share-link">Partager</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li></ul>
@@ -150,7 +173,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/11/06/hello-world/" data-id="cj9nyw0f60001qcb7xdmyeicg" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/11/06/hello-world/" data-id="cj9p3i8rw0000dwb7580359td" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -170,7 +193,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
+    <h3 class="widget-title">Mot-clés</h3>
     <div class="widget">
       <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a></li></ul>
     </div>
@@ -180,7 +203,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
+    <h3 class="widget-title">Nuage de mot-clés</h3>
     <div class="widget tagcloud">
       <a href="/tags/blog/" style="font-size: 10px;">blog</a>
     </div>
@@ -199,7 +222,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">Articles récents</h3>
     <div class="widget">
       <ul>
         
@@ -224,7 +247,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
